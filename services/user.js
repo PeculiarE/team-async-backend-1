@@ -22,7 +22,7 @@ export const newApplication = async (userId, data) => {
   const {
     email, dob, age, address, university, course, cgpa, cv, photo,
   } = data;
-  db.none(updateUser, [
+  return db.none(updateUser, [
     email,
     dob,
     age,
